@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Add/Edit Employee</title>
+</head>
+<body>
+<h1 th:text="${employee.id == null ? 'Add Employee' : 'Edit Employee'}"></h1>
+
+<!-- Form to Add/Edit Employee -->
+<form th:action="@{/save}" th:object="${employee}" method="post">
+    <!-- Hidden field for Employee ID, only when updating an employee -->
+    <input type="hidden" th:field="*{id}" />
+
+    <!-- Input for Employee Name -->
+    <label for="name">Name:</label>
+    <input type="text" id="name" th:field="*{name}" /><br/>
+
+    <!-- Input for Employee Email -->
+    <label for="email">Email:</label>
+    <input type="text" id="email" th:field="*{email}" /><br/>
+
+    <!-- Submit Button -->
+    <button type="submit">Save</button>
+</form>
+
+<!-- Back link to the list of employees -->
+<a href="/" th:href="@{/}">Back to Employee List</a>
+</body>
+</html>
