@@ -1,4 +1,4 @@
-**Structured list of possible improvements and upgradations** you can suggest **to an intern** for this `EmployeeApiController`:
+**Structured list of possible improvements and upgradations**  for this `EmployeeApiController`:
 
 ---
 
